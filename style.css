@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+#game-info {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 250px; /* Ensure it has some width */
+    text-align: left; /* Align text left */
+}
+
+#game-info p {
+    margin: 5px 0;
+}
+
+#player-color {
+    vertical-align: middle; /* Align color swatch nicely */
+}
+
+#canvas-container {
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    background-color: #fff; /* White background for the canvas area */
+    /* Prevent image scaling artifacts */
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+#game-canvas {
+    display: block; /* Remove extra space below canvas */
+    cursor: crosshair; /* Indicate clickable area */
+}
+
+#leaderboard {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 250px;
+}
+
+#leaderboard h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #555;
+}
+
+#score-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#score-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#score-list li:last-child {
+    border-bottom: none;
+}
+
+/* Style for cooldown state */
+#cooldown.active {
+    color: red;
+    font-weight: bold;
+}

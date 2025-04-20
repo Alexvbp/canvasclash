@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Canvas Clash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pixel Canvas Clash</h1>
+
+    <div id="game-info">
+        <p>Status: <span id="status">Connecting...</span></p>
+        <p>Your Color: <span id="player-color" style="display: inline-block; width: 20px; height: 20px; border: 1px solid black;"></span></p>
+        <p>Time Left: <span id="timer">--:--</span></p>
+        <p>Your Score: <span id="score">0</span></p>
+        <p>Cooldown: <span id="cooldown">Ready</span></p>
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="game-canvas" width="500" height="500"></canvas>
+        <!-- We'll set the actual pixel dimensions via JS based on game settings -->
+    </div>
+
+    <!-- Simple leaderboard placeholder -->
+    <div id="leaderboard">
+        <h2>Scores</h2>
+        <ul id="score-list">
+            <!-- Scores will be populated here -->
+        </ul>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>
