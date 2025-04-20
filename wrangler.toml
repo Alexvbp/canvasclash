@@ -1,17 +1,11 @@
-name = "pixel-canvas-clash"
-pages_build_output_dir = "." # Indicate static assets are in the root for Pages
-main = "worker.js"
+name = "pixel-canvas-clash" # This will be the Pages project name & script_name for DO
+pages_build_output_dir = "." # Serve static assets from the root directory
 compatibility_date = "2024-04-20" # Use a recent date
 
 # Durable Object binding for game rooms
-# This tells wrangler to make the GameRoom class available to the worker
+# For Pages, we need script_name to link the binding to the function code
 # under the binding name "GAME_ROOM".
 [[durable_objects.bindings]]
-name = "GAME_ROOM"
-class_name = "GameRoom"
-
-# Migration for the Durable Object class
-# This is required for wrangler to manage the DO class.
-[[migrations]]
-tag = "v1" # identifies this migration
-new_classes = ["GameRoom"] # lists the new DO classes in this migration
+name = "GAME_ROOM" # How the Function code accesses the DO
+class_name = "GameRoom" # The exported class name in worker.js
+script_name = "pixel-canvas-clash" # The name of this Pages project/worker
