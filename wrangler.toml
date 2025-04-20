@@ -1,4 +1,5 @@
 name = "pixel-canvas-clash"
+pages_build_output_dir = "." # Indicate static assets are in the root for Pages
 main = "worker.js"
 compatibility_date = "2024-04-20" # Use a recent date
 
