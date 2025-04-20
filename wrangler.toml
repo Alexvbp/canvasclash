@@ -1,4 +1,4 @@
-name = "pixel-canvas-clash" # This will be the Pages project name & script_name for DO
+name = "pixel-canvas-clash" # This will be the Pages project name & script_name for DO2
 pages_build_output_dir = "." # Serve static assets from the root directory
 compatibility_date = "2024-04-20" # Use a recent date
 
